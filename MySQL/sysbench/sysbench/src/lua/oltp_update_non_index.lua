@@ -25,8 +25,8 @@ function prepare_statements()
    prepare_non_index_updates()
 end
 
-function event(thread_id)
-   execute_non_index_updates(thread_id)
+function event()
+   execute_non_index_updates()
 
    check_reconnect()
 end

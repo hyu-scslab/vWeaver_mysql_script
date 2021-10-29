@@ -469,8 +469,9 @@ end
 --function execute_non_index_updates()
 --   local tnum = get_table_num()
 -- Dedicate each table for each worker thread
-function execute_non_index_updates(thread_id)
-   local tnum = thread_id % sysbench.opt.tables + 1
+-- (thread_id) & tnum = thread_id % sysbench.opt.tables + 1
+function execute_non_index_updates()
+   local tnum = get_table_num()
 
    for i = 1, sysbench.opt.non_index_updates do
       param[tnum].non_index_updates[1]:set_rand_str(c_value_template)
