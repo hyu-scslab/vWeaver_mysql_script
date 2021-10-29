@@ -66,7 +66,7 @@ innodb_table_locks=0
 # Adjust to number of buffer pool instance
 # innodb_page_cleaners=10
 
-# innodb_max_dirty_pages_pct=99.99
+innodb_max_dirty_pages_pct=0
 # innodb_max_dirty_pages_pct_lwm=10
 
 # innodb_adaptive_max_sleep_delay=100
